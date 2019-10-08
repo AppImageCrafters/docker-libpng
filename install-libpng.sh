@@ -1,6 +1,8 @@
 #! /bin/bash
 
 set -xe
+
+source /entrypoint.sh
 yum install -y xz automake autoconf libtool zlib-devel patch
 
 wget -O- https://sourceforge.net/projects/libpng/files/libpng16/"$LIBPNG_VERSION"/libpng-"$LIBPNG_VERSION".tar.xz/download | tar xJ
